@@ -44,34 +44,28 @@ def get_tab(count=1):
 
 def print_covid19_cli_info(VERSION):
     rangebi = Rangebi()
-    new_lines()
     print(
         rangebi.get_in_bold(
-            rangebi.get_in_success(
-                "\t\tWelcome to stockStalker-Cli (Version={})".format(VERSION)
-            )
-        )
+            "| Welcome to"
+        ),
+        rangebi.get_in_warning(
+            "stockStalker-Cli"
+        ),
+        "(Version={})".format(VERSION)
     )
     new_lines()
 
 
 def print_covid19_cli_credits():
     rangebi = Rangebi()
-    print(
-        rangebi.get_in_info("## Credits :")
-    )
     new_lines()
     print(
-        rangebi.get_in_warning("- MIT Licensed")
-    )
-    new_lines()
-    print(
-        "- Contributors :"
-    )
-    print(
-        "\t\t- ",
+        "| Made with",
+        rangebi.get_in_danger(
+            "Love"
+        ),
+        "By",
         rangebi.get_in_success(
-            "asprazz (https://github.com/asprazz) (owner)"
+            "Ankush Patil"
         )
     )
-    new_lines()

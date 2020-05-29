@@ -9,21 +9,28 @@ def main():
         description="Stock Portfolio Tracking CLI"
     )
 
-    # adding arguments
     parser.add_argument(
-            "-s",
-            "--show",
+            "-d",
+            "--display",
             default=False,
-            help="show portfolio with details",
+            help="display portfolio",
             action="store_true"
         )
     parser.add_argument(
-            "-a",
-            "--add",
+            "-b",
+            "--buy",
             default=False,
-            help="add entry to portfolio",
+            help="add buy entry to portfolio",
             action="store_true"
         )
+    parser.add_argument(
+        "-s",
+        "--sell",
+        default=False,
+        help="add sell entry to portfolio",
+        action="store_true"
+    )
+
     args = parser.parse_args()
     printer.print_covid19_cli_info(VERSION)
     app.run(args)
